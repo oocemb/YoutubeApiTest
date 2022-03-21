@@ -3,18 +3,16 @@ from time import time
 
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
-import googleapiclient.errors
-
 
 SCOPES = ["https://www.googleapis.com/auth/youtube"]
 API_SERVICE_NAME = "youtube"
 API_VERSION = "v3"
-CLIENT_SECRET_FILE = "YOUR_OAUTH_KEY.json"
+CLIENT_SECRET_KEY = "YOUR_OAUTH_KEY.json"
 
 
 def get_service():
     """Get credentials and create api client instance."""
-    flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRET_FILE, SCOPES)
+    flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRET_KEY, SCOPES)
     credentials = flow.run_console()
     return build(API_SERVICE_NAME, API_VERSION, credentials=credentials)
 

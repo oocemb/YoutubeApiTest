@@ -1,6 +1,6 @@
 from pprint import pprint
-import requests
 
+import requests
 
 PEXELS_API_KEY = "563492ad6f91700001000001e5f2cf95f0184911b01f9c4563cd1444"
 

@@ -1,8 +1,8 @@
-from hashlib import md5
-import requests
-import string
 import random
+import string
+from hashlib import md5
 
+import requests
 
 url = "https://b2b-test2.alfastrah.ru/wapi/dictionary/vehicle/category"
 
@@ -22,7 +22,7 @@ str3 = f"{ha1.hexdigest()}:{nonce}:00000001:{cnonce}:{qop}:{ha2.hexdigest()}"
 response = md5(str3.encode("utf-8"))
 
 header = {
-    "Authorization": f'Digest username="PO_AGENT", realm="alfastrah.ru", '
+    "Authorization": 'Digest username="PO_AGENT", realm="alfastrah.ru", '
     + f"nonce={nonce}, uri={url}, cnonce={cnonce}, nc=00000001, "
     + f"qop=auth, response={response.hexdigest()}"
 }

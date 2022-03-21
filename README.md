@@ -1,3 +1,4 @@
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 # What is more popular on Youtube?
 
 1) Youtube Data API v3
@@ -10,10 +11,10 @@
 
 4) no db
 5) script
-6) sync (async is comming...)
-7) 6 hours
+6) sync and async
+7) 10 hours
 
-Get started:
+Get started sync:
 
 1) Google dev console
     
@@ -38,3 +39,25 @@ Get started:
 6) Compare and enjoy
     ![](https://github.com/oocemb/YoutubeApiTest/blob/main/readme_image/result.jpg)
     
+
+Get started async:
+
+1) Google dev console
+    
+    Add Youtube Api 
+    
+    Create default API key credentials, download key.json
+
+2) Paste your key.json file in the file directory
+
+3) Install pip packages (add aioyoutube)
+
+    pip install aioyoutube
+
+4) Run and enter tags
+
+    python what_is_popular.py
+    
+    ![](https://github.com/oocemb/YoutubeApiTest/blob/main/readme_image/async_result.jpg)
+    
+6) Compare and enjoy
