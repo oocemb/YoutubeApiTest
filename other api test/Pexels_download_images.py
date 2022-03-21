@@ -17,7 +17,6 @@ def download(query: str, per_page: int):
 
         datas = request.json()
         for data in datas["photos"]:
-            print(data["url"])
             img = requests.get(data["src"]["small"], headers=header)
             out = open(f"{data['alt']}.jpg", "wb")
             out.write(img.content)
