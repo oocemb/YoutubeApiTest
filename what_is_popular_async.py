@@ -4,11 +4,12 @@ from time import time
 
 from aioyoutube import Api
 
+
 # Initialize required variables
 api = Api()
 with open("api.json") as api_key:
     data = json.load(api_key)
-API_KEY = data["api"]
+    API_KEY = data["api"]
 
 commentCount = dict()
 viewCount = dict()
@@ -71,7 +72,7 @@ async def main():
             viewCount[tag] += get_count_stats(result, "viewCount")
             likeCount[tag] += get_count_stats(result, "likeCount")
 
-    print(f"Time passed: {round(time()-start, 2)}")
+    print(f"Time passed: {time()-start:0.2f}")
     print("Compare the numbers, decide for yourself.")
     for tag in tags:
         print(
